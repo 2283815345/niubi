@@ -149,14 +149,24 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://2283815345.github.io/posts/my-first-post/" class="color-inherit dim link">
-            My First Post
+          <a href="http://2283815345.github.io/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="color-inherit dim link">
+            css 知识总结
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          大家好 我的博客开通了，希望我能写出好文章给大家
+          目录  浏览器渲染原理 transform介绍 transition介绍 总结  浏览器渲染原理 浏览器渲染步骤：  根据HTML构建HTML树（DOM树） 根据CSS构建CSS树（CSSOM） 将两棵树合并成渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）   三种更新方式：  JS/CSS &gt; 样式 &gt; 布局 &gt; 绘制 &gt; 合成 S/CSS &gt; 样式 &gt; 绘制 &gt; 合成 JS/CSS &gt; 样式 &gt; 合成   第一种方式，全部走一遍，例子： div.remove()会触发当前元素消失，其他元素重布局（relayout）
+第二种方式，跳过布局，例子： 改变背景颜色，直接重绘（repaint）+ 合成（composite）
+第三种方式，跳过布局和绘制，例子： 改变transform，只需要合成（composite）
+从上面可以看出，改变不同的属性会造成不同的渲染步骤，那么我们怎么知道改变了某个属性会怎么渲染呢？ 这时候就要用到&rdquo;CSSTriggers.com&rdquo;CSSTriggers.com个网站了，在里面可以查询CSS的各个属性都触发了哪些渲染步骤，十分的方便。
+最后是一些google的参考资料：
+渲染树构建、布局及绘制
+渲染性能
+使用transform来实现动画
+transform介绍 四个常用功能  位移translate 缩放scale 旋转rotate 倾斜skew
+注意： 一般都需要配合transition过渡 linline元素不支持transform，需要先变成block
+  transform&mdash;translate常用写法：  translateY()```
         </div>
-          <a href="http://2283815345.github.io/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://2283815345.github.io/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -173,25 +183,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://2283815345.github.io/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="color-inherit dim link">
-            
+          <a href="http://2283815345.github.io/posts/my-first-post/" class="color-inherit dim link">
+            My First Post
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          # 2283815345.github.io 浏览器渲染原理 transform介绍 transition介绍 总结
-浏览器渲染原理 浏览器渲染步骤：  根据HTML构建HTML树（DOM树） 根据CSS构建CSS树（CSSOM） 将两棵树合并成渲染树（render tree） Layout布局（文档流、盒模型、计算大小和位置） Paint绘制（把边框颜色、文字颜色、阴影等画出来） Compose合成（根据层叠关系展示画面）   三种更新方式：  JS/CSS &gt; 样式 &gt; 布局 &gt; 绘制 &gt; 合成 S/CSS &gt; 样式 &gt; 绘制 &gt; 合成 JS/CSS &gt; 样式 &gt; 合成   第一种方式，全部走一遍，例子： div.remove()会触发当前元素消失，其他元素重布局（relayout）
-第二种方式，跳过布局，例子： 改变背景颜色，直接重绘（repaint）+ 合成（composite）
-第三种方式，跳过布局和绘制，例子： 改变transform，只需要合成（composite）
-从上面可以看出，改变不同的属性会造成不同的渲染步骤，那么我们怎么知道改变了某个属性会怎么渲染呢？ 这时候就要用到&rdquo;CSSTriggers.com&rdquo;CSSTriggers.com个网站了，在里面可以查询CSS的各个属性都触发了哪些渲染步骤，十分的方便。
-最后是一些google的参考资料：
-渲染树构建、布局及绘制
-渲染性能
-使用transform来实现动画
-transform介绍 四个常用功能  位移translate 缩放scale 旋转rotate 倾斜skew
-注意： 一般都需要配合transition过渡 linline元素不支持transform，需要先变成block
-  transform&mdash;translate常用写法：  translateY()```
+          大家好 我的博客开通了，希望我能写出好文章给大家
         </div>
-          <a href="http://2283815345.github.io/posts/css%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://2283815345.github.io/posts/my-first-post/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
